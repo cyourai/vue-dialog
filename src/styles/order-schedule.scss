@@ -1,0 +1,361 @@
+.step {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.container{
+  background: #ffffff;
+  .order-container {
+    margin: 20px 20px 20px 20px;
+  }
+}
+.remark {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.el-collapse-item__header {
+  padding-left: 20px;
+  font-size: 15px !important;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.el-collapse-item__content {
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.foot-content {
+  margin-top: 40px;
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 20px;
+  .li-price {
+    color: #ed0a2b;
+  }
+  .btn {
+    width: 96px;
+    height: 28px;
+    padding: 0;
+  }
+}
+
+.bottom {
+  margin-top: 8px;
+  .delete {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #ed0a2b;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-left: 36px;
+  }
+  .text {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-left: 36px;
+  }
+  .text-sub {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+  .active-num {
+    color: #ed0a2b;
+  }
+  .main-price {
+    font-family: DINAlternate-Bold;
+    font-size: 40px;
+    color: #ED0A2B;
+    line-height: 40px;
+  }
+  .confirm-btn {
+    width: 200px;
+    height: 40px;
+    padding: 0;
+  }
+}
+
+.head,
+.bottom-wrap {
+  padding: 38px 40px;
+}
+
+.big-checkbox {
+  .el-checkbox__inner {
+    width: 20px;
+    height: 20px;
+  }
+  .el-checkbox__inner::after {
+    height: 10px;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+  }
+  .el-checkbox__label {
+    padding-left: 16px;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.item {
+  border-bottom: 1px solid #d9d9d9;
+  &:last-child {
+    border: none;
+  }
+  .item-wrap {
+    padding: 40px;
+  }
+  .title {
+    .el-checkbox__label {
+      font-family: PingFangSC-Medium;
+      font-size: 24px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 24px;
+      position: relative;
+      top: 3px;
+    }
+  }
+  .sub-title {
+    margin-left: -40px;
+    line-height: 40px;
+    .el-checkbox__label {
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 20px;
+      position: relative;
+      top: 3px;
+    }
+  }
+  .content {
+    padding: 30px 30px 30px 30px;
+    .el-date-editor.el-input {
+      width: 140px;
+    }
+    .el-checkbox + .el-checkbox {
+      margin-left: 0;
+    }
+    background-color: #fafafa;
+    .date-label {
+      font-family: PingFangSC-Light;
+      font-size: 16px;
+      color: #4d4d4d;
+      letter-spacing: 0;
+      line-height: 14px;
+    }
+    .spilt-flag {
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #cccccc;
+      letter-spacing: 0;
+      margin: 0 5px;
+    }
+    .tb-date {
+      margin-left: 40px;
+      .el-checkbox__label {
+        font-family: PingFangSC-Light;
+        font-size: 16px;
+        color: #4d4d4d;
+        letter-spacing: 0;
+        line-height: 14px;
+      }
+    }
+  }
+}
+.user-info {
+  span{
+    margin-right: 20px;
+  }
+}
+.top {
+  padding-bottom: 28px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.cart-detail-1 {
+  .time-select-checkbox-group {
+    .el-checkbox {
+      margin-right: 16px;
+      margin-bottom: 8px;
+      color: #999999;
+    }
+    .unit-price {
+      font-family: PingFangSC-Light;
+      font-size: 16px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 16px;
+    }
+    .label {
+      position: relative;
+      top: 5px;
+    }
+    .time-title {
+      font-family: PingFangSC-Light;
+      font-size: 20px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 16px;
+      width: 150px;
+    }
+    .label2 {
+      font-family: PingFangSC-Light;
+      font-size: 20px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 16px;
+      width: 150px;
+    }
+    .group {
+      width: 990px;
+      ul {
+        border-bottom: 1px solid #d9d9d9;
+        li {
+          margin-top: 18px;
+          border-bottom: 1px solid #f0f0f0;
+          padding-bottom: 8px;
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+    .group-price {
+      font-family: PingFangSC-Light;
+      color: #ed0a2b;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 16px;
+      padding-left: 200px;
+    }
+    .count {
+      font-family: PingFangSC-Light;
+      font-size: 16px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 16px;
+    }
+    .checkbox-group {
+      width: 375px;
+    }
+  }
+}
+
+.li-price {
+  color: #ed0a2b;
+}
+
+.foot-content {
+  margin-top: 40px;
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 20px;
+  .li-price {
+    color: #ed0a2b;
+  }
+  .btn {
+    width: 96px;
+    height: 28px;
+    padding: 0;
+  }
+}
+
+.cart2 {
+  .top {
+    border-bottom: none;
+  }
+  .cart-detail-2 {
+    .el-input-number__decrease,
+    .el-input-number__increase {
+      background: #fff;
+    }
+    .tc-name {
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 20px;
+      margin-bottom: 40px;
+    }
+    .input-number-label {
+      font-family: PingFangSC-Regular;
+      font-size: 20px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+  }
+}
+
+.title {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.red {
+  color: #ed0a2b;
+}
+
+.close-context {
+  margin-left: 40px;
+}
+.inline-edit {
+  color: #2e68aa;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+.editor{
+  cursor: pointer;
+}
+.avatar-uploader .el-upload {
+ border: 1px dashed #d9d9d9;
+ border-radius: 6px;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}

@@ -1,0 +1,30 @@
+.filter-container {
+  .el-form {
+    width: 100%;
+    .filter-container-name {
+      width: 300px;
+      margin-bottom: 40px;
+      .el-input {
+        width: 300px;
+      }
+      /deep/ .el-form-item__label {
+        text-align: left;
+      }
+    }
+    .filter-container-title {
+      padding: 10px 0;
+      margin-top: 20px;
+      border-top: 1px solid #d6d6db;
+    }
+    .el-select {
+      width: 100%;
+    }
+    .el-button {
+      padding: 7px;
+      width: 30%;
+      min-width: 30px;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}

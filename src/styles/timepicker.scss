@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.el-input /deep/ {
+  width: 116px;
+
+  input {
+    text-align: center;
+    letter-spacing: 2px;
+    height: 32px;
+  }
+
+  i {
+    cursor: pointer;
+  }
+}
+
+.time-picker {
+  &-container {
+    margin-top: 12px;
+    padding-bottom: 30px;
+    width: 116px;
+    border: 1px solid #e4e7ed;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 4px;
+    line-height: 30px;
+    position: relative;
+
+    .el-button /deep/ {
+      position: absolute;
+      right: 3px;
+      bottom: 3px;
+      width: 50px;
+      height: 24px;
+      padding: 0;
+      text-align: center;
+
+      span {
+        line-height: 24px;
+      }
+    }
+  }
+
+  &-list {
+    width: 50%;
+    padding: 5px 0;
+    height: 180px;
+    border-bottom: 1px solid #e4e7ed;
+    overflow: hidden;
+    position: relative;
+
+    &:first-child {
+      float: left;
+    }
+  }
+
+  &-minute {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #606266;
+    position: absolute;
+
+    &:first-child {
+      border-right: 1px solid #e4e7ed;
+    }
+  }
+
+  &-item {
+    height: 30px;
+
+    &:hover {
+      background-color: #f5f7fa !important;
+      font-weight: 700 !important;
+      cursor: pointer;
+    }
+  }
+
+  &-arrow {
+    position: absolute;
+    color: #e4e7ed;
+    top: -12px;
+    left: 35px;
+  }
+}
+
+// 滚动条
+.time-picker-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.time-picker-list::-webkit-scrollbar-thumb {
+  background-color: #dddee0;
+  outline: 1px solid slategrey;
+  border-radius: 5px;
+}
+
+.time-picker-list::-webkit-scrollbar {
+  width: 8px;
+}

@@ -1,0 +1,256 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial,
+    'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN',
+    'Source Han Sans SC', 'Microsoft YaHei', 'Wenquanyi Micro Hei',
+    'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp',
+    sans-serif;
+  line-height: 1.2em;
+  margin: 0;
+  font-size: 100%;
+  // cursor: move;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 1010px;
+  // background-image: url('~@/assets/onekey/2.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 40px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    display: none;
+
+  }
+
+  h1.title1 {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  padding-left: 30px;
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  .block {
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    margin-bottom: 10px;
+
+    &-transfer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: 0.8s;
+      padding: 0;
+    }
+
+    &:hover .block-transfer {
+      transform: rotateY(360deg);
+    }
+
+    i {
+      font-size: 2em;
+      line-height: 50px;
+    }
+
+    .p-in {
+      display: none;
+    }
+
+    .p-out {
+      display: block;
+      font-size: 20px;
+      line-height: 50px;
+      width: 200px;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      left: 70px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &-rightBottom {
+      width: 50px;
+      height: auto;
+      display: block;
+      position: relative;
+    }
+
+    &-small {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .block-transfer {
+        padding: 0;
+      }
+
+      i {
+        width: 100%;
+        height: 100%;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    min-width: 1100px;
+
+    // min-height: 720px;
+    h1 {
+      display: block;
+    }
+  }
+
+  .content {
+    padding-left: 0;
+
+    .row:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    .block {
+      display: inline-block;
+      height: 140px;
+      margin-bottom: 0;
+
+      &-transfer {
+        padding-top: 40px;
+      }
+
+      i {
+        font-size: 4em;
+      }
+
+      .p-in {
+        display: inline-block;
+        text-align: left;
+        position: absolute;
+        left: 10px;
+        bottom: 5px;
+        font-size: 19px;
+      }
+
+      .p-out {
+        display: none;
+      }
+
+      &-rec {
+        width: 290px;
+      }
+
+      &-squ {
+        width: 140px;
+      }
+
+      &-rightBottom {
+        width: 140px;
+        height: 140px;
+        display: inline-block;
+      }
+
+      &-small {
+        position: absolute;
+        width: 65px;
+        height: 65px;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        i {
+          line-height: 65px;
+        }
+
+        &:nth-child(1) {
+          left: 0;
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          right: 0;
+          top: 0;
+        }
+
+        &:nth-child(3) {
+          left: 0;
+          bottom: 0;
+        }
+
+        &:nth-child(4) {
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    min-width: 1400px;
+    // min-height: 1010px;
+  }
+
+  .content {
+    .block {
+      height: 190px;
+
+      &-transfer {
+        padding-top: 60px;
+      }
+
+      i {
+        font-size: 5em;
+      }
+
+      &-rec {
+        width: 390px;
+      }
+
+      &-squ {
+        width: 190px;
+      }
+
+      &-rightBottom {
+        width: 190px;
+        height: 190px;
+      }
+
+      &-small {
+        width: 90px;
+        height: 90px;
+
+        i {
+          line-height: 90px;
+        }
+      }
+    }
+  }
+}
