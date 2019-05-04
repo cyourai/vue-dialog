@@ -1,6 +1,6 @@
 {
   "name": "cyourai-vue-dialog",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "模态窗口封装",
   "author": "张磊 <cyourai@sina.com>",
   "private": false,

@@ -5,6 +5,8 @@
        :is-show-checkbox="isShowCheckbox"
        :is-show-footer="isShowFooter"
        :is-show-index="isShowIndex"
+       :is-show-first="isShowFirst"
+       :is-show-last="isShowLast"
        :table-list="tableList"
        :query-param="queryParam">
     <div class="table-content-spe">
@@ -60,6 +62,8 @@
                          type="index"
                          width="50">
         </el-table-column>
+        <!--首列追加自定义-->
+        <slot name="first-slot"></slot>
         <!--内容列-->
         <el-table-column v-for="(header, index) in headers"
                          :key="index"
@@ -170,6 +174,16 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    isShowFirst: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    isShowLast: {
+      type: Boolean,
+      required: false,
+      default: true
     },
     isShowBorder: {
       type: Boolean,
