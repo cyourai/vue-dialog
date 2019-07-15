@@ -4,7 +4,7 @@
                width="60%"
                :visible.sync="visable"
                :btn-text="btnText"
-               :init-dialog-url="initUrl"
+               :init-dialog-url="initDialogUrl"
                ref="elDialog">
       <div class="transfer-panel"
            v-loading="loading">
@@ -47,7 +47,7 @@ export default {
         return ['全部用户', '已绑定用户']
       }
     },
-    initUrl: {
+    initDialogUrl: {
       String,
       required: false,
       default: '/user/selectOrganizationUserTransfer'
@@ -77,8 +77,8 @@ export default {
     queryParam(val) {
       this.queryParam = val
     },
-    initUrl(val) {
-      this.initUrl = val
+    initDialogUrl(val) {
+      this.initDialogUrl = val
       this.refreshTable()
     }
   },
@@ -118,10 +118,10 @@ export default {
       this.refreshTable()
     },
     refreshTable() {
-      if (isNotEmpty(this.initUrl)) {
+      if (isNotEmpty(this.initDialogUrl)) {
         this.loading = true
         request({
-          url: this.initUrl,
+          url: this.initDialogUrl,
           method: 'get'
         })
           .then(result => {
