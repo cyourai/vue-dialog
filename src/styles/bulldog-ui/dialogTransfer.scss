@@ -1,19 +1,14 @@
-@import '../variables.scss';
-
+@import '../variables';
 .dialog-user-container /deep/ {
-
   @media (min-width: $screen-sm-min) {
     max-height: 350px
   }
-
   @media (min-width: $screen-md-min) {
     max-height: 650px
   }
-
   @media (min-width: $screen-lg-min) {
     max-height: 780px
   }
-
   .transfer-panel {
     text-align: center;
   }
@@ -60,3 +55,4 @@
     }
   }
 }
+

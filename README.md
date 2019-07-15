@@ -7,3 +7,9 @@
   
 npm clean cache -f
 npm install
+
+npm login  
+user: cyourai  
+email: cyourai@qq.com  
+
+npm publish

@@ -15,11 +15,6 @@ import TestTree from '@/test/TestTree'
 import TestOrganization from '@/test/TestOrganization'
 import TestDialogTransfer from '@/test/TestDialogTransfer'
 import TestDialogTransferPro from '@/test/TestDialogTransferPro'
-import TestProcessGrid from '@/test/TestProcessGrid'
-import TestProcessTree from '@/test/TestProcessTree'
-import TestProcessModeler from '@/test/TestProcessModeler'
-import TestOnekeyIndex from '@/test/TestOnekeyIndex'
-import TestOnekeyStart from '@/test/TestOnekeyStart'
 import TestTableHeader from '@/test/TestTableHeader'
 import TestTimePicker from '@/test/TestTimePicker'
 
@@ -80,25 +75,6 @@ export default new Router({
       name: 'TestTableGrid',
       component: TestTableGrid
     },
-
-    {
-      path: '/processGrid',
-      name: 'TestProcessGrid',
-      component: TestProcessGrid
-    },
-
-    {
-      path: '/processTree',
-      name: 'TestProcessTree',
-      component: TestProcessTree
-    },
-
-    {
-      path: '/processModeler',
-      name: 'TestProcessModeler',
-      component: TestProcessModeler
-    },
-
     {
       path: '/stopupload',
       name: 'TestStopUpload',
@@ -128,16 +104,6 @@ export default new Router({
       path: '/dialogTransferProcess',
       name: 'TestDialogTransferPro',
       component: TestDialogTransferPro
-    },
-    {
-      path: '/onekeyIndex',
-      name: 'TestOnekeyIndex',
-      component: TestOnekeyIndex
-    },
-    {
-      path: '/onekeyStart',
-      name: 'TestOnekeyStart',
-      component: TestOnekeyStart
     },
     {
       path: '/timePicker',

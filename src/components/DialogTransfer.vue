@@ -163,7 +163,7 @@ export default {
     },
     showDialog() {
       this.visable = true
-      this.refreshTable()
+      // this.refreshTable()
     },
     closeDialog() {
       this.visable = false
@@ -181,51 +181,5 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-.dialog-user-container /deep/ {
-  .transfer-panel {
-    text-align: center;
-  }
-  .el-dialog {
-    height: 60%;
-    position: relative;
-    &__body {
-      .transfer-panel {
-        height: 100%;
-        .el-transfer {
-          text-align: left;
-          display: inline-block;
-          width: 90%;
-          height: 100%;
-          .el-transfer-panel {
-            width: 40%;
-            height: 100%;
-            &__body {
-              .el-checkbox-group::-webkit-scrollbar-track {
-                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                border-radius: 5px;
-              }
-              .el-checkbox-group::-webkit-scrollbar-thumb {
-                background-color: rgba(64, 158, 255, 0.5);
-                outline: 1px solid slategrey;
-                border-radius: 5px;
-              }
-              .el-checkbox-group::-webkit-scrollbar {
-                width: 10px;
-              }
-            }
-          }
-          .el-transfer__buttons {
-            max-width: 10%;
-            padding: 5%;
-          }
-        }
-      }
-    }
-    &__footer {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-  }
-}
+@import '../styles/bulldog-ui/dialogTransfer.scss';
 </style>

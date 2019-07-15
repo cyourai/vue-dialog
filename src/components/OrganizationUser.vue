@@ -99,7 +99,7 @@
       initTreeUrl: {
         type: String,
         required: false,
-        default: '/user/organization/selectOrganizationByRootCode/orgRoot'
+        default: '/user/organization/selectOrganizationByRootCode/root'
       }
     },
     data() {
@@ -176,7 +176,6 @@
         const data = {}
         data.organizationCode = this.queryParam.organizationCode
         data.userNameList = params.value
-        debugger
         request({
           url: this.saveUrl,
           method: 'post',
