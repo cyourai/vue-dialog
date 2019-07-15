@@ -29,8 +29,7 @@
       <el-container class="right-panel">
         <el-header>{{treeLevel}}</el-header>
         <div class="option-area" v-show="!isSelectModel">
-          <el-button type="danger" @click="declareShow">灾难宣告</el-button>
-          <el-button type="success" @click="dialogShow">配置人员</el-button>
+          <el-button type="success" @click="dialogShow">人员分组</el-button>
         </div>
         <!--右 人员信息-->
         <el-main>
@@ -44,27 +43,14 @@
         </el-main>
       </el-container>
     </el-container>
-    <el-dialog title="灾难宣告"
-               ret="declareDialog"
-               :visible.sync="declareDialogVisible">
-      <el-form :model="declareForm"
-               ref="scoreForm">
-        <el-form-item label="宣告内容"
-                      prop="dec"
-                      class="dec-item">
-          <el-input v-model="declareForm.declareContent"
-                    type="textarea"
-                    :autosize="{ minRows: 6, maxRows: 10}"
-                    placeholder="请输入灾难宣告内容"></el-input>
-        </el-form-item>
-      </el-form>
-      <div slot="footer"
-           class="dialog-footer">
-        <el-button @click="declareDialogVisible = false">取 消</el-button>
-        <el-button type="primary"
-                   @click="declareDialogVisible = false">确定</el-button>
-      </div>
-    </el-dialog>
+    <!--人员穿梭框-->
+    <dialog-transfer ref="dialogTransfer"
+                     :init-dialog-url="dialogTransfer.initUrl"
+                     :type = dialogTransfer.type
+                     :titles = dialogTransfer.titles
+                     :filter-placeholder = "dialogTransfer.placeholder"
+                     @submit="dialogSubmit">
+    </dialog-transfer>
   </div>
 </template>
 
@@ -100,20 +86,18 @@
         type: String,
         required: false,
         default: '/user/organization/selectOrganizationByRootCode/root'
-      }
+      },
     },
     data() {
       return {
         declareDialogVisible: false,
-        treeLevel: '',
+        treeLevel: '人员分组',
         delTreeUrl: '',
         updateTreeUrl: '',
         insertTreeUrl: '',
         selectUrl: '',
         delUrl: '',
         updateUrl: '',
-        // 配置人员关联
-        initUrl: '',
         saveUrl: '',
         // 表头
         headers: [
@@ -129,6 +113,12 @@
         },
         declareForm: {
           declareContent: ''
+        },
+        dialogTransfer: {
+          type: "user",
+          titles: ['全部用户', '已分组用户'],
+          placeholder: "选择分组用户",
+          initUrl: '/user/selectOrganizationUserTransfer'
         }
       }
     },
@@ -148,10 +138,12 @@
         this.treeLevel = isNotEmpty(param.treeLevel) ? param.treeLevel.join(' / ') : ''
         this.queryParam.organizationCode = param.organizationCode
         if (param.organizationType === 'root') {
-          this.queryParam.organizationCode = ''
+          this.$refs.tableUser.clear()
+          this.treeLevel='人员分组'
         } else {
           // 配置人员关联初始化查询
           this.initUrl = `/user/selectOrganizationUserTransfer/${param.organizationCode}`
+          this.dialogTransfer.initUrl = `/user/selectOrganizationUserTransfer/${param.organizationCode}/`
         }
         this.$refs.tableUser.refreshTable()
       },

@@ -4,6 +4,7 @@
                width="60%"
                :visible.sync="visable"
                :btn-text="btnText"
+               :init-dialog-url="initUrl"
                ref="elDialog">
       <div class="transfer-panel"
            v-loading="loading">
@@ -36,16 +37,19 @@ export default {
   props: {
     filterPlaceholder: {
       String,
+      required: false,
       default: '选择绑定用户'
     },
     titles: {
       Array,
+      required: false,
       default: function() {
         return ['全部用户', '已绑定用户']
       }
     },
     initUrl: {
       String,
+      required: false,
       default: '/user/selectOrganizationUserTransfer'
     },
     queryParam: {

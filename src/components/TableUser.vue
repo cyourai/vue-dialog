@@ -93,6 +93,9 @@
         // 分页-跳页
         this.tableData.pageNum = pageNum
         this.refreshTable()
+      },
+      clear() {
+        this.tableData.list = []
       }
     }
   }
