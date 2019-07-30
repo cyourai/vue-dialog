@@ -130,7 +130,7 @@
     },
     beforeDestroy() {
       try {
-        this.editor.destroy()
+        if(this.editor !== null) this.editor.destroy()
       } catch (e) {
         console.error(e)
       }
