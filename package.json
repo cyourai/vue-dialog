@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bpmn-js": "3.4.1",
-    "bpmn-js-properties-panel": "0.26.2",
+    "bpmn-js-properties-panel": "0.31.0",
     "bpmn-moddle": "5.1.6",
     "camunda-bpmn-moddle": "3.2.0",
     "codemirror": "^5.39.0",
